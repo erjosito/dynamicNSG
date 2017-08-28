@@ -207,7 +207,7 @@ private static bool DeleteInfoFromDb (TraceWriter log)
         log.Info("Error deleting NICs table");
     }
     // Tags
-    if (DeleteTableFromDb("NICs", log)) {
+    if (DeleteTableFromDb("Tags", log)) {
         log.Info("Tags table deleted successfully");
     } else {
         aux = false;
@@ -308,9 +308,9 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 
     // These line deletes all tables to make sure we have a clean slate
     if (DeleteInfoFromDb(log)) {
-        log.Info("VMs table deleted successfully");
+        log.Info("Database table records deleted successfully");
     } else {
-        log.Info("Error deleting database tables");
+        log.Info("Error deleting database table records");
     }
 
 
