@@ -1,0 +1,42 @@
+﻿@model dynamicNSG.Models.VM
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResourceGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResourceGroup)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.VmId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<dynamicNSG.Models.Group>
+
+@{
+    ViewBag.Title = "Dynamic Groups";
+}
+
+<h2>Dynamic Groups</h2>
+
+<br>
+<p>Dynamic VM membership to these groups can be defined via @Html.ActionLink("Rules", "Index", "Rules")</p>
+<br>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GroupName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GroupId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.GroupName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GroupId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.GroupId }) |
+            <!--@Html.ActionLink("Details", "Details", new { id=item.GroupId }) | -->
+            @Html.ActionLink("Delete", "Delete", new { id=item.GroupId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<dynamicNSG.Models.NIC>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VmId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NicId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.VmId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NicId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NicId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NicId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NicId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Dynamic Security Groups</h1>
+    <p class="lead">This application allows to configure rules that define dynamic membership of Azure VMs, NICs and IP addresses to Security Groups.</p>
+    <p>Security groups must be manually defined, but pertenence to the group is configured by means of Rules.</p>
+    @Html.ActionLink("NSGrules", "Index", "NSGrules", new { area = "" }, new { @class = "btn btn-primary btn-lg" })
+</div>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <h2>Step 1</h2>
+        <p>Define your dynamic groups</p>
+        @Html.ActionLink("Groups", "Index", "Groups", new { area = "" }, new { @class = "btn btn-default" })
+    </div>
+
+    <div class="col-md-4">
+        <h2>Step 2</h2>
+        <p>Define your group rules </p>
+        @Html.ActionLink("Rules", "Index", "Rules", new { area = "" }, new { @class = "btn btn-default" })
+    </div>
+
+    <div class="col-md-4">
+        <h2>Step 3</h2>
+        <p>Define your policy</p>
+        @Html.ActionLink("Policies", "Index", "Policies", new { area = "" }, new { @class = "btn btn-default" })
+    </div>
+
+    <!--
+    <div class="col-md-4">
+        <h2>Step 4</h2>
+        <p>Update your NSGs</p>
+        <p><a class="btn btn-default" href="https://prod-04.northcentralus.logic.azure.com:443/workflows/aebcd507e85543c1b82b2dbaef86ca1e/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=D_KpouIwG802K9zJCpf_9LU0l1Of7cwM-XISsRTs7tY">Refresh NSGs &raquo;</a></p>
+    </div>
+    -->
+
+</div>

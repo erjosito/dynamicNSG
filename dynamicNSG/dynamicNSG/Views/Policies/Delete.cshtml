@@ -1,0 +1,64 @@
+﻿@model dynamicNSG.Models.Policy
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Policy</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Action)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Action)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Src)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Src)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dst)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dst)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Range)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Range)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

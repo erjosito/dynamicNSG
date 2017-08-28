@@ -1,0 +1,104 @@
+﻿@model dynamicNSG.Models.NSGrule
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>NSGrule</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nsgName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nsgName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.order)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.order)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.action)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.action)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.srcIp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.srcIp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.srcProt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.srcProt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.srcPort)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.srcPort)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dstIp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dstIp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dstProt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dstProt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dstPort)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dstPort)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

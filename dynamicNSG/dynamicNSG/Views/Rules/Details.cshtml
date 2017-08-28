@@ -1,0 +1,59 @@
+﻿@model dynamicNSG.Models.Rules
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Rules</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Operand1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Operand1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Operator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Operator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Operand2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Operand2)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GroupId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroupId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,58 @@
+﻿@model dynamicNSG.Models.Policy
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Policy</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Action)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Action)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Src)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Src)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dst)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dst)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Range)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Range)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

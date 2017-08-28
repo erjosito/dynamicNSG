@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>The goal of this application is providing an overlay framework on top of Azure objects that allows NSGs to be dynamic.</p>
+<p>The process is the following:</p>
+<br>
+<ul>
+    <li>A set of Azure functions are triggered whenever something changes in Azure, and store metadata in an Azure SQL DB</li>
+    <li>These Azure functions can be asynchronously called from the home page of this app too</li>
+    <li>In this application you can configure groups of VMs, whose membership is controlled by rules</li>
+    <li>These rules can match on the name of the VM, its operative system, or ARM labels</li>
+    <li>You then define your security policy, where source and/or destination can be one of those dynamic groups of VMs</li>
+    <li>The functions called in the first place will interpret those rules, match them across the metadata stored in the Azure SQL DB, and create/update a set of NSGs</li>
+    <li>Automatic association between the VMs and the NSGs could be implemented, but it is recommended to start with manual assignments</li>
+</ul>
+<br>
+<p>This application has been developed by <a href="mailto:jose.moreno@microsoft.com">Jose Moreno</a></p>

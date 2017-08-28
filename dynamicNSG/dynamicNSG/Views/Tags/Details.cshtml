@@ -1,0 +1,42 @@
+﻿@model dynamicNSG.Models.Tag
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tag</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VmId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VmId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TagName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TagName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TagValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TagValue)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
